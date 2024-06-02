@@ -131,18 +131,18 @@ namespace ClinicApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "88c37930-f441-43bd-abce-c28bf9219bd0",
+                            Id = "4798a0dd-9093-4565-ba2e-d6d06ac269c5",
                             Name = "admin",
                             NormalizedName = "patient"
                         },
                         new
                         {
-                            Id = "6ba99747-f954-4f60-98a2-c45f48aeac83",
+                            Id = "2c285b3e-85db-4da9-8536-088361fa8082",
                             Name = "client"
                         },
                         new
                         {
-                            Id = "4d1ba252-011d-44ae-ba60-d1054e1af807",
+                            Id = "efdabdc4-e855-403d-9f75-704cf13a7a4c",
                             Name = "patient"
                         });
                 });
