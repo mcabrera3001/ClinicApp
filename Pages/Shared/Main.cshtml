@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ClinicApp.Models.ApplicationUser> SignInManager
+@inject UserManager<ClinicApp.Models.ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    var user = await UserManager.GetUserAsync(User);
+    var roles = await UserManager.GetRolesAsync(user);
+
+    <ul class="nav">
+        @if (roles.Contains("admin"))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-page="/Admin/Index">Admin Dashboard</a>
+            </li>
+        }
+        @if (roles.Contains("doctor"))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-page="/Doctor/Index">Doctor Dashboard</a>
+            </li>
+        }
+        @if (roles.Contains("patient"))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-page="/Patient/Index">Patient Dashboard</a>
+            </li>
+        }
+    </ul>
+}
+

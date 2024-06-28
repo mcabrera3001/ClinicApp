@@ -19,8 +19,8 @@ namespace ClinicApp.Sevices
             var admin = new IdentityRole("admin");
             admin.NormalizedName = "admin";
 
-            var client = new IdentityRole("client");
-            admin.NormalizedName = "client";
+            var client = new IdentityRole("doctor");
+            admin.NormalizedName = "doctor";
 
             var patient = new IdentityRole("patient");
             admin.NormalizedName = "patient";
