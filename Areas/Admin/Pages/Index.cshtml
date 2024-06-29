@@ -1,10 +1,14 @@
 ﻿@page
-@model ClinicApp.Models.AdminPagesModel
 @using Microsoft.AspNetCore.Authorization
-[Authorize(Roles = "Admin")]
+
 @{
     ViewData["Title"] = "Admin Dashboard";
 }
 
-<h2>Admin Dashboard</h2>
-<p>Welcome, Admin!</p>
+<h2>Admin Dashboard jaja</h2>
+<p>Welcome, Adminnn!</p>
+
+<ul>
+    <li><a asp-page="./CreateDoctor">Create Doctor</a></li>
+    <li><a asp-page="./CreatePatient">Create Patient</a></li>
+</ul>
