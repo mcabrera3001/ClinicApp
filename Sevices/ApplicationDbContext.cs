@@ -19,13 +19,13 @@ namespace ClinicApp.Sevices
             var admin = new IdentityRole("admin");
             admin.NormalizedName = "admin";
 
-            var client = new IdentityRole("doctor");
+            var doctor = new IdentityRole("doctor");
             admin.NormalizedName = "doctor";
 
             var patient = new IdentityRole("patient");
             admin.NormalizedName = "patient";
 
-            builder.Entity<IdentityRole>().HasData(admin, client, patient);
+            builder.Entity<IdentityRole>().HasData(admin, doctor, patient);
 
         }
     }

@@ -11,7 +11,13 @@
         @if (roles.Contains("admin"))
         {
             <li class="nav-item">
-                <a class="nav-link text-dark" id="Admin Dashboard" asp-area="Areas/Admin" asp-page="/Index">Admin Dashboard</a>
+                <a class="nav-link text-dark"  asp-area="Admin" asp-page="/AdminDashboard">Admin Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Admin" asp-page="/CreateDoctor">Create Doctor</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Admin" asp-page="/CreatePatient">Create Paciente</a>
             </li>
         }
         @if (roles.Contains("doctor"))

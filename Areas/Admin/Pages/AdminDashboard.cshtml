@@ -1,0 +1,10 @@
+﻿@page
+@model AdminDashboard
+@using Microsoft.AspNetCore.Authorization
+[Authorize(Roles = "admin")]
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h2>Admin Dashboard</h2>
+<p>Welcome, Admin!</p>

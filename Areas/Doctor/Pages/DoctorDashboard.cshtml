@@ -1,0 +1,9 @@
+﻿@page
+@model ClinicApp.Areas.Doctor.Pages.DoctorDashboard
+[Authorize(Roles = "doctor")]
+@{
+    ViewData["Title"] = "Doctor Dashboard";
+}
+
+<h2>Doctor Dashboard</h2>
+<p>Welcome, Doctor!</p>
