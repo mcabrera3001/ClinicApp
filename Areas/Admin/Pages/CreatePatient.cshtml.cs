@@ -49,8 +49,8 @@ public class CreatePatientModel : PageModel
 
             if (result.Succeeded)
             {
-                await _userManager.AddToRoleAsync(user, "Patient");
-                return RedirectToPage("./Index");
+                await _userManager.AddToRoleAsync(user, "patient");
+                return RedirectToPage("./AdminDashboard");
             }
 
             foreach (var error in result.Errors)

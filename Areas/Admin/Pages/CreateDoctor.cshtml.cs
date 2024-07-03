@@ -23,7 +23,7 @@ public class CreateDoctorModel : PageModel
     {
         [Required]
         [Display(Name = "User Name")]
-        public required string UserName { get; set; }
+        public required string Name { get; set; }
 
         [Required]
         [EmailAddress]
@@ -44,13 +44,13 @@ public class CreateDoctorModel : PageModel
     {
         if (ModelState.IsValid)
         {
-            var user = new ApplicationUser { UserName = Input.UserName, Email = Input.Email };
+            var user = new ApplicationUser { UserName = Input?.Name, Email = Input?.Email };
             var result = await _userManager.CreateAsync(user, Input.Password);
 
             if (result.Succeeded)
             {
-                await _userManager.AddToRoleAsync(user, "Doctor");
-                return RedirectToPage("./Index");
+                await _userManager.AddToRoleAsync(user, "doctor");
+                return RedirectToPage("/AdminDashboard");
             }
 
             foreach (var error in result.Errors)
