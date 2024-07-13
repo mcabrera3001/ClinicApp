@@ -1,8 +1,8 @@
 ﻿@page
-@model ClinicApp.Areas.Patient.Pages.PatientDashboard
-[Authorize(Roles = "patient")]
+@model PatientDashboardModel
 @{
     ViewData["Title"] = "Patient Dashboard";
+    Layout = "/Pages/Shared/_Layout.cshtml";
 }
 
 <h2>Patient Dashboard</h2>

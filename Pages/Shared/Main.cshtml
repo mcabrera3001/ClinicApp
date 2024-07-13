@@ -23,13 +23,13 @@
         @if (roles.Contains("doctor"))
         {
             <li class="nav-item">
-                <a class="nav-link" asp-area="Admin" asp-page="/Doctor/DoctorDashboard">Doctor Dashboard</a>
+                <a class="nav-link" asp-area="Doctor" asp-page="/DoctorDashboard">Doctor Dashboard</a>
             </li>
         }
         @if (roles.Contains("patient"))
         {
             <li class="nav-item">
-                <a class="nav-link" asp-area="Admin" asp-page="/Patient/PatientDashboard">Patient Dashboard</a>
+                <a class="nav-link" asp-area="Patient" asp-page="/PatientDashboard">Patient Dashboard</a>
             </li>
         }
     </ul>

@@ -1,6 +1,10 @@
-﻿namespace ClinicApp.Areas.Doctor.Pages
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+[Authorize(Roles = "doctor")]
+
+public class DoctorDashboardmModel : PageModel
 {
-    public class DoctorDashboard
+    public void OnGet()
     {
     }
 }

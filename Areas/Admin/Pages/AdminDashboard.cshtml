@@ -1,10 +1,18 @@
 ﻿@page
-@model AdminDashboard
-@using Microsoft.AspNetCore.Authorization
-[Authorize(Roles = "admin")]
+@model AdminDashboardModel
 @{
     ViewData["Title"] = "Admin Dashboard";
+    Layout = "/Pages/Shared/_Layout.cshtml"; // Utiliza el layout global
 }
 
 <h2>Admin Dashboard</h2>
-<p>Welcome, Admin!</p>
+<p>Welcome to the Admin Dashboard!</p>
+
+<ul>
+    <li>
+        <a asp-area="Admin" asp-page="/CreateDoctor">Create Doctor</a>
+    </li>
+    <li>
+        <a asp-area="Admin" asp-page="/CreatePatient">Create Patient</a>
+    </li>
+</ul>
