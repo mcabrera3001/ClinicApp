@@ -4,6 +4,7 @@ using ClinicApp.Sevices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClinicApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240715203015_creacion del super admin")]
+    partial class creaciondelsuperadmin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -131,25 +134,25 @@ namespace ClinicApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "14326acb-3dce-4aab-9567-317d05d9da9a",
+                            Id = "229a3bf2-8b0f-44cf-8e44-eeb9289948e9",
+                            Name = "super_admin",
+                            NormalizedName = "super_admin"
+                        },
+                        new
+                        {
+                            Id = "a5534be4-ccf4-4ef6-9184-b8bd9c1f42e8",
                             Name = "admin",
                             NormalizedName = "patient"
                         },
                         new
                         {
-                            Id = "918e74a5-90d1-4aff-bb52-ba79ab0cb395",
+                            Id = "b98048f0-1488-4b6b-a9e3-df199a0e82d1",
                             Name = "doctor"
                         },
                         new
                         {
-                            Id = "1295d0ea-2050-4ea9-a0a9-7a833b6b37fb",
+                            Id = "e3f8eaeb-d0a4-424f-8569-eee554d0e22a",
                             Name = "patient"
-                        },
-                        new
-                        {
-                            Id = "4178f865-57cd-430f-821c-c0e2f7b3c966",
-                            Name = "super_admin",
-                            NormalizedName = "super_admin"
                         });
                 });
 

@@ -1,0 +1,9 @@
+﻿@page
+@model ClinicApp.Areas.SuperAdmin.Pages.IndexModel
+@using Microsoft.AspNetCore.Authorization
+[Authorize(Roles = "super_admn")]
+@{
+    ViewData["Title"] = "Super Admin Dashboard";
+}
+<h2>Super Admin Dashboard</h2>
+<p>hola, super admin!</p>

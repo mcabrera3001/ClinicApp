@@ -20,6 +20,22 @@
                 <a class="nav-link" asp-area="Admin" asp-page="/CreatePatient">Create Paciente</a>
             </li>
         }
+        @if (roles.Contains("super_admin"))
+        {
+            <p> hola super </p>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="Admin" asp-page="/SuperAdminDashboard">super Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="CreateSuperAdmin" asp-page="/CreateAdmin">Create Admin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Admin" asp-page="/CreateDoctor">Create Doctor</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Admin" asp-page="/CreatePatient">Create Paciente</a>
+            </li>
+        }
         @if (roles.Contains("doctor"))
         {
             <li class="nav-item">

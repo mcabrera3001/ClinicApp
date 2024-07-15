@@ -25,7 +25,10 @@ namespace ClinicApp.Sevices
             var patient = new IdentityRole("patient");
             admin.NormalizedName = "patient";
 
-            builder.Entity<IdentityRole>().HasData(admin, doctor, patient);
+            var super_admin = new IdentityRole("super_admin");
+            super_admin.NormalizedName = "super_admin";
+
+            builder.Entity<IdentityRole>().HasData( admin, doctor, patient, super_admin);
 
         }
     }
