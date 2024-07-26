@@ -5,14 +5,42 @@
     Layout = "/Pages/Shared/_Layout.cshtml"; // Utiliza el layout global
 }
 
-<h2>Admin Dashboard</h2>
-<p>Welcome to the Admin Dashboard!</p>
 
-<ul>
-    <li>
-        <a asp-area="Admin" asp-page="/CreateDoctor">Create Doctor</a>
-    </li>
-    <li>
-        <a asp-area="Admin" asp-page="/CreatePatient">Create Patient</a>
-    </li>
-</ul>
+@section Sidebar {
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" asp-area="Admin" asp-page="/AdminDashboard">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="patientsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Patients
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="patientsDropdown">
+                        <li><a class="dropdown-item" asp-area="Admin" asp-page="/CreatePatient">Create Patient</a></li>
+                        <li><a class="dropdown-item" asp-area="Admin" asp-page="/Patients/Edit">Edit Patient</a></li>
+                        <li><a class="dropdown-item" asp-area="Admin" asp-page="/Patients/List">List Patients</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="doctorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Doctors
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="doctorsDropdown">
+                        <li><a class="dropdown-item" asp-area="Admin" asp-page="/CreateDoctor">Create Doctor</a></li>
+                        <li><a class="dropdown-item" asp-area="Admin" asp-page="/Doctors/Edit">Edit Doctor</a></li>
+                        <li><a class="dropdown-item" asp-area="Admin" asp-page="/Doctors/List">List Doctors</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+}
+
+<div class="col">
+    <h2>Admin Dashboard</h2>
+    <p>Welcome to the Admin Dashboard!</p>
+</div>
