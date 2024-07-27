@@ -1,12 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ClinicApp.Areas.SuperAdmin.Pages
+[Authorize(Roles = "super_admin")]
+
+public class Super_AdminDashboard : PageModel
 {
-    public class IndexModel : PageModel
-    {
-        public void OnGet()
-        {
-        }
-    }
+   public void OnGet()
+   {
+   }
+    
 }
