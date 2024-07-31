@@ -23,39 +23,6 @@ body {
 
 
 
-.sidebar {
-    position: fixed;
-    top: 56px; /* Ajusta este valor si tu navbar tiene un tamaño diferente */
-    left: 0;
-    height: calc(100% - 56px);
-    width: 250px;
-    background-color: #f8f9fa;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 20px; /* Asegura un pequeño espaciado superior */
-}
 
-.sidebar .nav-link {
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #333;
-    display: block;
-    transition: 0.3s;
-}
 
-.sidebar .nav-link:hover {
-    background-color: #ddd;
-}
 
-.sidebar .dropdown-menu {
-    background-color: #f8f9fa;
-    box-shadow: none;
-    border: none;
-    padding-left: 20px; /* Indentar elementos del dropdown */
-}
-
-.main-content {
-    padding: 20px;
-}

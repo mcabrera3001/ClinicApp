@@ -35,9 +35,10 @@
             </div>
         </nav>
     </header>
+    <partial name="MainLeft" />
+
     <div class="container-fluid">
         <div class="row">
-            @RenderSection("Sidebar", required: false)
             <main role="main" class="col">
                 @RenderBody()
             </main>
