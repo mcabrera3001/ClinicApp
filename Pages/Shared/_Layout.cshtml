@@ -35,13 +35,16 @@
             </div>
         </nav>
     </header>
-    <partial name="MainLeft" />
-
     <div class="container-fluid">
         <div class="row">
-            <main role="main" class="col">
+            <div class="col-md-2">
+                <!-- Menú lateral -->
+                @await Html.PartialAsync("MainLeft")
+            </div>
+            <div class="col-md-10">
+                <!-- Contenido principal -->
                 @RenderBody()
-            </main>
+            </div>
         </div>
     </div>
 
