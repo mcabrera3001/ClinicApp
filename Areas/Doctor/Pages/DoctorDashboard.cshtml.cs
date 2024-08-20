@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-[Authorize(Roles = "doctor")]
+[Authorize(Roles = "Doctor")]
 
 public class DoctorDashboardmModel : PageModel
 {

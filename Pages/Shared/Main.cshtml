@@ -2,25 +2,26 @@
 @inject SignInManager<ClinicApp.Models.ApplicationUser> SignInManager
 @inject UserManager<ClinicApp.Models.ApplicationUser> UserManager
 
+
 @if (SignInManager.IsSignedIn(User))
 {
     var user = await UserManager.GetUserAsync(User);
     var roles = await UserManager.GetRolesAsync(user);
 
     <ul class="nav">
-        @if (roles.Contains("admin"))
+        @if (roles.Contains("Admin"))
         {
             <li class="nav-item">
-                <a class="nav-link text-dark"  asp-area="Admin" asp-page="/AdminDashboard">Admin Dashboard</a>
+                <a class="nav-link text-dark" asp-area="Admin" asp-page="/AdminDashboard">Admin Dashboard</a>
             </li>
         }
-        @if (roles.Contains("doctor"))
+        @if (roles.Contains("Doctor"))
         {
             <li class="nav-item">
                 <a class="nav-link" asp-area="Doctor" asp-page="/DoctorDashboard">Doctor Dashboard</a>
             </li>
         }
-        @if (roles.Contains("patient"))
+        @if (roles.Contains("Patient"))
         {
             <li class="nav-item">
                 <a class="nav-link" asp-area="Patient" asp-page="/PatientDashboard">Patient Dashboard</a>

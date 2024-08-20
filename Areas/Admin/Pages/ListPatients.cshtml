@@ -1,0 +1,32 @@
+﻿@page
+@model ListPatientsModel
+@{
+    ViewData["Title"] = "List Patients";
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>List Patients</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var patient in Model.Patients)
+        {
+            <tr>
+                <td>@patient.UserName</td>
+                <td>@patient.LastName</td>
+                <td>@patient.Email</td>
+                <td>@patient.PhoneNumber</td>
+                <td>@patient.Address</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -167,9 +167,10 @@ namespace ClinicApp.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "2c285b3e-85db-4da9-8536-088361fa8082", null, "client", null },
-                    { "4798a0dd-9093-4565-ba2e-d6d06ac269c5", null, "admin", "patient" },
-                    { "efdabdc4-e855-403d-9f75-704cf13a7a4c", null, "patient", null }
+                    { "0934231f-52fd-4144-b8b5-ffdec35dd7d9", null, "Patient", "Patient" },
+                    { "3d1090d0-4b0c-4b8e-b1b3-824b311fdbf5", null, "Admin", "Admin" },
+                    { "90b27c60-94e9-40b1-b3db-1c85a9503a7f", null, "SuperAdmin", "SuperAdmin" },
+                    { "bea54f5d-b1fc-4c0f-a8c3-2f62e4adf090", null, "Doctor", "Doctor" }
                 });
 
             migrationBuilder.CreateIndex(

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClinicApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240531232518_Migracion Inicial")]
+    [Migration("20240819233816_Migracion Inicial")]
     partial class MigracionInicial
     {
         /// <inheritdoc />
@@ -134,19 +134,27 @@ namespace ClinicApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "4798a0dd-9093-4565-ba2e-d6d06ac269c5",
-                            Name = "admin",
-                            NormalizedName = "patient"
+                            Id = "90b27c60-94e9-40b1-b3db-1c85a9503a7f",
+                            Name = "SuperAdmin",
+                            NormalizedName = "SuperAdmin"
                         },
                         new
                         {
-                            Id = "2c285b3e-85db-4da9-8536-088361fa8082",
-                            Name = "client"
+                            Id = "3d1090d0-4b0c-4b8e-b1b3-824b311fdbf5",
+                            Name = "Admin",
+                            NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "efdabdc4-e855-403d-9f75-704cf13a7a4c",
-                            Name = "patient"
+                            Id = "bea54f5d-b1fc-4c0f-a8c3-2f62e4adf090",
+                            Name = "Doctor",
+                            NormalizedName = "Doctor"
+                        },
+                        new
+                        {
+                            Id = "0934231f-52fd-4144-b8b5-ffdec35dd7d9",
+                            Name = "Patient",
+                            NormalizedName = "Patient"
                         });
                 });
 

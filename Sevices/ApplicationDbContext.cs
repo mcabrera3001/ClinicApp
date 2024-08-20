@@ -16,17 +16,20 @@ namespace ClinicApp.Sevices
         {
             base.OnModelCreating(builder);
 
-            var admin = new IdentityRole("admin");
-            admin.NormalizedName = "admin";
+            var SuperAdmin = new IdentityRole("SuperAdmin");
+            SuperAdmin.NormalizedName = "SuperAdmin";
 
-            var doctor = new IdentityRole("doctor");
-            admin.NormalizedName = "doctor";
+            var Admin = new IdentityRole("Admin");
+            Admin.NormalizedName = "Admin";
 
-            var patient = new IdentityRole("patient");
-            admin.NormalizedName = "patient";
+            var Doctor = new IdentityRole("Doctor");
+            Doctor.NormalizedName = "Doctor";
 
-            builder.Entity<IdentityRole>().HasData(admin, doctor, patient);
+            var Patient = new IdentityRole("Patient");
+            Patient.NormalizedName = "Patient";
 
+            builder.Entity<IdentityRole>().HasData(SuperAdmin, Admin, Doctor, Patient);
+            
         }
     }
 
