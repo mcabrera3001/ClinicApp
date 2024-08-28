@@ -18,7 +18,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var patient in Model.Patients)
+        @foreach (var patient in Model.Patients!)
         {
             <tr>
                 <td>@patient.UserName</td>

@@ -14,7 +14,7 @@ public class ListPatientsModel : PageModel
         _userManager = userManager;
     }
 
-    public IList<ApplicationUser> Patients { get; set; }
+    public IList<ApplicationUser>? Patients { get; set; }
 
     public async Task OnGetAsync()
     {
