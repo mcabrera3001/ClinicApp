@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ClinicApp.Models;
 
-namespace ClinicApp.Areas.Admin.Pages
+namespace ClinicApp.Areas.Doctor.Pages
 {
     public class CreateDoctorModel : PageModel
     {

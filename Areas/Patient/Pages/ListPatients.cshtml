@@ -15,6 +15,7 @@
             <th>Email</th>
             <th>PhoneNumber</th>
             <th>Address</th>
+            <th>Actions</th> <!-- Nueva columna para las acciones -->
         </tr>
     </thead>
     <tbody>
@@ -26,7 +27,16 @@
                 <td>@patient.Email</td>
                 <td>@patient.PhoneNumber</td>
                 <td>@patient.Address</td>
+                <td>
+                    <!-- Enlace para editar -->
+                    <a asp-area="Patient" asp-page="/EditPatient" asp-route-id="@patient.Id" class="btn btn-primary btn-sm text-white">Edit</a>
+
+                    <!-- Enlace para dar de baja -->
+                    <a asp-area="Patient" asp-page="/DeletePatient" asp-route-id="@patient.Id" class="btn btn-danger btn-sm text-white">Delete</a>
+
+                </td>
             </tr>
+            <a href="Pages/EditPatient.cshtml">Master Pages Tutorials</a>
         }
     </tbody>
 </table>

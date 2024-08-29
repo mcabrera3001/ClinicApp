@@ -19,7 +19,7 @@ public class ListPatientsModel : PageModel
     public async Task OnGetAsync()
     {
         var users = _userManager.Users.ToList();
-        var patientRole = await _userManager.GetUsersInRoleAsync("patient");
+        var patientRole = await _userManager.GetUsersInRoleAsync("Patient");
 
         Patients = users.Where(user => patientRole.Contains(user)).ToList();
     }

@@ -74,7 +74,7 @@ public class CreatePatientModel : PageModel
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = "")
         {
-            returnUrl = returnUrl ?? Url.Content("~/Areas/Admin/Pages/ListPatients");
+            returnUrl = returnUrl ?? Url.Content("~/Areas/Patient/Pages/ListPatients");
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser
